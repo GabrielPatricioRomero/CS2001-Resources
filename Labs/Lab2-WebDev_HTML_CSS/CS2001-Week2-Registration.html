@@ -9,41 +9,54 @@
     <body>
         <header></header>
         <nav>
-            <!-- ToDo: An unordered list to represent the menu, 
-                       each list item should correspond to the menu items (Home, Register, Login, Help)
-                       The css class of the menu is "navlist"
-                       Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
             <ul class="navlist">
+                <li><a href="CS2001-Week-2-Registration.html">Home</a></li>
+                <li><a href="CS2001-Week-2-Registration.html">Register</a></li>
+                <li><a href="CS2001-Week-2-Registration.html">Login</a></li>
+                <li><a href="CS2001-Week-2-Registration.html">Help</a></li>
+            </ul>
+
             </ul>
          </nav>
         <main>
-            <!-- Check Week 2 Lecture to learn about HTML5 semantic elements-->
             <aside>
             </aside>
             <section>
                 <form class="center" novalidate>
-                <!-- ToDo: Implement the form containing 
-                           Name - type text
-                           email- type text
-                           password - type text
-                           Terms of Service - type checkbox
-                           Register - button
-                           Learn more - link
-                           Check lecture slides and the links on the slides to learn about forms
-                           and how to create a button that would react to a click Event
-                        -->
-                    <!-- Example given for user type checkboxes-->
+                    <div class="inputs">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
                     
-                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
-                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
-                    <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
+                        <label for="Email">Email:</label>
+                        <input type="text" id="Email" name="Email">
+                    
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" name="password">
+                    
+                        <label for="repassword">Re-type password:</label>
+                        <input type="text" id="repassword" name="repassword">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label for="buyer">
+                            <input type="checkbox" id="buyer" name="buyer" value="buyer">
+                            I want to buy produce directly from allotment owners.
+                        </label>
+                        <label for="seller">
+                            <input type="checkbox" id="seller" name="seller" value="seller">
+                            I want to sell produce from my allotment.
+                        </label>
+                        <br>
+                        <label for="terms_service"><input type="checkbox" id="terms_service" name="terms_service" value="terms_service">
+                            I agree with the <a href="url">Terms of Use</a> and <a href="url">Privacy Policy</a></label>
+                    </div>
 
-                    <br><br>
+                    <div class="register-links">
+                        <input type="button" id="button" name="btn_register" value="Register">
+                        <a href="url">Learn more</a>
+                    </div>
+
                 </form>
-                <div class="center" id="hiddenSection">
-                    <p id="hiddenParagraph"></p>
-                </div>
             </section>
         </main>
     </body>
