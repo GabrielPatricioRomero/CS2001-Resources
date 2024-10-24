@@ -1,26 +1,26 @@
-body{
+body {
     font-family: "Lato", sans-serif;
-    max-width: 75rem;
+
     margin: auto;
     height: 100vh;
-}
-
-header{
-    background-image:url(SharingFood.jpg);
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: center;
-    height:200px;
     width: 100%;
-    margin: auto;
 }
 
-/**** Menu Style *****************************************/
+header {
+    background-image: url(SharingFood.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+}
+
 nav {
     border-bottom: 1px solid black;
 }
 
-ul.navlist{
+ul.navlist {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -28,8 +28,7 @@ ul.navlist{
     background-color: #333;
 }
 
-ul.navlist li
-{
+ul.navlist li {
     float: left;
     display: inline;
 }
@@ -47,13 +46,14 @@ ul.navlist li a:hover {
 }
 
 /**** Styling for main part */
-
 main {
+    width: 100%;
     border-bottom: 0.5rem solid;
     box-sizing: border-box;
-    /*ToDo: Make this a flexible container; 
-    You can find the following helpful: display, flex-wrap, width, min-height, height
-    See lecture slides*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 section, aside {
@@ -63,51 +63,96 @@ section, aside {
 }
 
 aside {
-    /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 25% of the page.*/ 
+    min-width: 100%;
+    max-width: 30%;
     background-color: #deded8;
 }
 
 section {
-    /*ToDo: Set width. For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 75% of the page.*/
-}
-
-/*Styling for search in aside*/
-.search{
-    display: block;
-    width: auto;
-    text-align: left;
+    min-width: 100%;
+    max-width: 70%;
 }
 
 .center {
-    /*ToDo: Styling for centered elements
-    You can use margin, width useful to center.
-    */
-    border: 3px solid green;
-    padding: 10px;
-  }
-
-/* Styling for text inputs in the form*/
-.textInput {
-    display: block;
-    width: auto;
-    text-align: left;
+    margin: auto;
+    width: 100%;
+    max-width: 600px; 
+    background-color: #FFEEDA;
+    border-radius: 10px; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 
+                0px 8px 16px rgba(0, 0, 0, 0.15); 
 }
 
-/*Styling with a media query - lecture slide 36*/
+.inputs label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputs input {
+    display: block;
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.register-links {
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 700px) {
-    /* ToDo: Style aside and section so that they take 100% width on small screens*/
-    aside {
-    
-    }
-    
-    section {
- 
+    aside, section {
+        width: 100%;
     }
 
-    #hiddenSection{
-        overflow-wrap: break-word;
+    .center {
+        width: 100%;
+        padding: 10px;
+        border: none;
     }
 
+    .inputs input {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .checkbox-group label {
+        font-size: 0.9rem;
+    }
+}
+
+.inputs input:focus {
+    border: 2px solid #007BFF;
+    outline: none;
+}
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
 }
