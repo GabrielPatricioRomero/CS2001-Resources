@@ -2,7 +2,8 @@
 //At the beginning, the form is empty, and therefore, not valid
 
 //Data to send
-var formData = {
+var formData = 
+{
     username: "",
     email: "",
     password: "",
